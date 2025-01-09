@@ -1,0 +1,2374 @@
+@font-face {
+    font-family: Cinzel;
+    src: url(font/Cinzel-VariableFont_wght.ttf);
+
+}
+
+
+*{
+    font-family: Cinzel;
+    font-weight: 600;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    ::-webkit-scrollbar {
+        display: none;
+        width: 5px;
+        background-color: rgb(112, 198, 249);
+      }
+      ::-webkit-scrollbar-track {
+        box-shadow: inset 0px -1px 13px rgb(112, 198, 249);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: rgb(38, 88, 215);
+    
+      }
+}
+body{
+    min-width: 1479;
+    background-image: url(photon.svg);
+    // background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 90vh;
+    display: flex;
+    overflow: hidden;
+    .popup0{
+        display: none;
+    }
+    .popup{
+        display: grid;
+        grid-template-columns: 90% 10%;
+        border-radius: 10px;
+        width: 85%;
+        height: 95vh;
+        position: absolute;
+        top: 0;
+        right: 45%;
+        transform: translate(40% , 2%);
+        overflow: hidden;
+        z-index: 2;
+        .controlBar{
+            grid-column: 1/2;
+            height: 100%;
+            display: flex;
+            background-color: #49243e00;
+            flex-direction: column;
+            position: relative;
+            .btnsControls{
+                width: 100%;
+                height: 5%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-direction: row;
+                background-color: rgba(73, 36, 62, 0.818);
+
+                button{
+                    margin: 0 5px;
+                    width: 50px;
+                    height: 5vh;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: rgba(255, 255, 255, 0);
+                    border: none;
+                    cursor: pointer;
+                    background-color: #49243E;
+                    svg{
+                        fill: whitesmoke;
+                    }
+                }
+                .cenretBtn0{
+                    display: none;
+                }
+                .cenretBtn{
+                    display: flex;
+                }
+                .btnSvgClose:hover{
+                    background-color: red;
+                }
+                .btnSvgCenter:hover{
+                    background-color: green;
+
+                }
+                .btnSvgMin:hover{
+                    background-color: green;
+
+                }
+
+            }
+            .contentTab10{
+                visibility: hidden;
+            }
+            .contentTab1{
+                width: 100%;
+                height: 95%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: azure;
+                font-size: 60px;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                visibility: visible;
+                .mainDivCart{
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgb(112,66,100);
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: flex-end;
+                    flex-wrap: wrap;
+                    position: relative;
+                    h1{
+                        font-size: 25px;
+                        background-color: #704264;
+                        color: whitesmoke;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 10%;
+                        padding-right: 20px;
+                        border: 1px solid rgba(245, 245, 245, 0.099);
+                        
+                    }
+                    .contantCart{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        width: 100%;
+                        height: 90%;
+                        // background-color: darkkhaki;
+                        flex-wrap: wrap;
+                        .cleean{
+                            width: 10%;
+                            height: 7%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border: none;
+                            border-right: 2px solid rgba(255, 255, 255, 0.212);
+                            background-color: #49243E;
+                            color: white;
+                            transition: .5s;
+                            &:hover{
+                                background-color: #d0b862;
+                                color: black;
+                            }
+                            
+
+                        }
+                        input{
+                            display: flex;
+                            background-color: #49243E;
+                            width: 90%;
+                            height: 7%;
+                            text-align: right;
+                            justify-content: left;
+                            align-items: center;
+                            margin:0;
+                            font-size: 18px;
+                            border: none;
+                            
+                        }
+                        ul{
+                            position: relative;
+                            // background-color: #390fe1;
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            li{
+                                width: 100%;
+                                background-color: rgb(112,66,100);
+                                display: flex;
+                                color: whitesmoke;
+
+
+
+                            }
+                            .sended{
+                                background-color: rgb(73,36,62);
+                                color: whitesmoke;
+                                border-radius: 5px;
+                                border: 1px solid rgb(112,66,100);
+                                position: fixed;
+                                bottom: 2%;
+                                left: 41%;
+                                width: 15%;
+                                padding: 5px 10px;
+                                transition: .2s;
+                                cursor: pointer;
+                                &:hover{
+                                    color: black;
+                                    background-color: #d0b862;
+                                    border-color: #d0b862;
+                                    cursor: pointer;
+                                }
+                            }
+
+                        }
+                        .selectLI0{
+                            visibility: hidden;
+                        }
+                        .selectLI{
+                            width: 30%;
+                            height: 100vh;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            background-color: rgb(112,66,100);
+                            padding: 10px;
+                            flex-direction: column;
+                            visibility: visible;
+                            text-align: left;
+                            h3{
+                                font-size: 18px;
+                                width: 100%;
+                                height: 5vh;
+                                color: whitesmoke;
+                                // visibility: visible;
+                                // color: rgba(255, 0, 0, 0);
+                            }
+                            .projectName{
+                                width: 100%;
+                                height: 10vh;
+                                background-color: rgba(73, 36, 62, 0);
+                                margin: 10px 0;
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: center;
+                                align-items: center;
+                                flex-wrap: wrap;
+                                #pn{
+                                    font-size: 14px;
+                                    width: 100%;
+                                    color: whitesmoke;
+                                }
+                                .btnPjN{
+                                    margin: 0 5px;
+                                    padding: 5px 10px ;
+                                    width: 30%;
+                                    height: 50%;
+                                    justify-content: center;
+                                    align-items: center;
+                                    display: flex;
+                                    cursor: pointer;
+                                    border-radius: 5px;
+                                    border: 2px solid rgb(162, 86, 142);
+                                    transition: .2s;
+                                    &:hover{
+                                        background-color: rgb(166, 88, 146);
+                                        color: white;
+                                    }
+                                }
+                            }
+                            .priority{
+                                width: 100%;
+                                height: 10vh;
+                                background-color: rgba(112, 66, 100, 0);
+                                margin: 10px 0;
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: center;
+                                align-items: center;
+                                flex-wrap: wrap;
+                                #pP{
+                                    font-size: 14px;
+                                    width: 100%;
+                                    color: whitesmoke;
+
+                                }
+                                .btnPjP{
+                                    margin: 0 5px;
+                                    padding: 5px 10px ;
+                                    width: 30%;
+                                    height: 50%;
+                                    justify-content: center;
+                                    align-items: center;
+                                    display: flex;
+                                    cursor: pointer;
+                                    border-radius: 5px;
+                                    border: 2px solid rgb(162, 86, 142);
+                                    transition: .2s;
+                                    &:hover{
+                                        background-color: rgb(166, 88, 146);
+                                        color: white;
+                                    }
+                                }
+                            }
+                            .statuses{
+                                width: 100%;
+                                height: 10vh;
+                                background-color: rgba(112, 66, 100, 0);
+                                margin: 10px 0;
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: center;
+                                align-items: center;
+                                flex-wrap: wrap;
+                                #pS{
+                                    font-size: 14px;
+                                    width: 100%;
+                                    color: whitesmoke;
+
+                                }
+                                .btnPjS{
+                                    margin: 0 5px;
+                                    padding: 5px 10px ;
+                                    width: 30%;
+                                    height: 50%;
+                                    justify-content: center;
+                                    align-items: center;
+                                    display: flex;
+                                    cursor: pointer;
+                                    border-radius: 5px;
+                                    border: 2px solid rgb(162, 86, 142);
+                                    transition: .2s;
+                                    &:hover{
+                                        background-color: rgb(166, 88, 146);
+                                        color: white;
+                                    }
+                                }
+                            }
+                            .accept{
+                                position: absolute;
+                                top: 64vh;
+                                left: 2%;
+                                width: 5%;
+                                height: 5vh;
+                                border-radius: 5px;
+                                cursor: pointer;
+                                background-color: rgb(73,36,62);
+                                color: whitesmoke;
+                                border: 1px solid rgb(112,66,100);
+                                transform: .5s;
+                                &:hover{
+                                    background-color: #d0b862;
+                                    color: black;
+                                    border-color: #d0b862;
+                                    
+                                }
+
+                            }
+                            .toCorrect{
+                                position: absolute;
+                                top: 64vh;
+                                left: 9%;
+                                width: 5%;
+                                height: 5vh;
+                                cursor: pointer;
+                                border-radius: 5px;
+                                background-color: rgb(73,36,62);
+                                color: whitesmoke;
+                                border: 1px solid rgb(112,66,100);
+                                transform: .5s;
+                                &:hover{
+                                    background-color: #d0b862;
+                                    color: black;
+                                    border-color: #d0b862;
+                                    
+                                }
+
+                            }
+                        }
+                        .selectLI11{
+                            visibility: hidden;
+                        }
+                        .selectLI10{
+                            width: 30%;
+                            height: 20%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: rgb(162, 15, 178);
+                            
+                            padding: 10px;
+                            flex-direction: column;
+                            visibility: visible;
+                            position: absolute;
+                            top: 16%;
+                            right: 70%;
+                            h3{
+                                font-size: 16px;
+                                width: 100%;
+                                height: 5vh;
+                            }
+                            .numList{
+                                height: 35%;
+                                // text-decoration: line-through;
+                            }
+                        }
+                        .selectLI21{
+                            visibility: hidden;
+                        }
+                        .selectLI20{
+                            width: 30%;
+                            height: 20%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: rgb(236, 33, 70);
+                            padding: 10px;
+                            flex-direction: column;
+                            visibility: visible;
+                            position: absolute;
+                            top: 16%;
+                            right: 70%;
+                            h3{
+                                font-size: 16px;
+                                width: 100%;
+                                height: 5vh;
+                            }
+                            .numList{
+                                height: 35%;
+                                // text-decoration: line-through;
+                            }
+                        }
+                        .selectLI31{
+                            visibility: hidden;
+                        }
+                        .selectLI30{
+                            width: 30%;
+                            height: 20%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: rgb(48, 24, 100);
+                            
+                            padding: 10px;
+                            flex-direction: column;
+                            visibility: visible;
+                            position: absolute;
+                            top: 16%;
+                            right: 70%;
+                            h3{
+                                font-size: 16px;
+                                width: 100%;
+                                height: 5vh;
+                            }
+                            .numList{
+                                height: 35%;
+                                // text-decoration: line-through;
+                            }
+                        }
+                        ul{
+                            display: flex;
+                            background-color: rgb(112,66,100);
+                            width: 70%;
+                            height: 93%;
+                            text-align: left;
+                            justify-content: flex-start;
+                            align-items: flex-start;
+                            flex-direction: column;
+                            padding: 30px 50px;
+                            flex-wrap: wrap;
+                            overflow: hidden;
+                            // margin: auto;
+
+                            li{
+                                display: flex;
+                                direction: ltr;
+                                list-style: circle;
+                                font-size: 16px;
+                                color: white;
+                                padding: 10px;
+                                background-color: rgba(245, 245, 245, 0.248);
+                                margin: 10px 0;
+                                width: 100%;
+                                border-radius: 10px;
+
+                            }
+                        }
+                    }
+                }
+                
+            }
+            .contentTab20{
+                visibility: hidden;
+            }
+            .contentTab2{
+                width: 100%;
+                height: 95%;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                flex-direction: row;
+                font-size: 60px;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                visibility: visible;
+                line-height: 35px;
+                flex-wrap: wrap;
+                .ulTab2{
+                    width: 60%;
+                    height: 100%;
+                    direction: ltr;
+                    background-color: rgb(112,66,100);
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    overflow: scroll;
+                    li{
+                        width: 90%;
+                        font-size: 20px;
+                        list-style: decimal;
+                        background-color: rgb(112,66,100);
+                        margin: 10px auto;
+                        cursor: pointer;
+                        color: whitesmoke;
+                        border-bottom: 1px solid whitesmoke;
+                        p{
+                            color: black;
+                            background-color: rgb(112,66,100);
+                        }
+                    }  
+                }
+                #homeTab2{
+                    background-color: rgb(73,36,62);
+                    width: 100%;
+                    display: flex;
+                    height: 10vh;
+                    font-size: 30px;
+                    justify-content: flex-end;
+                    align-items: center;
+                    padding: 10px;
+                    color: whitesmoke;
+                }
+                .controlListHome{
+                    background-color: rgb(112,66,100);
+                    width: 40%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-end;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    border-right: 1px solid rgba(245, 245, 245, 0.371);
+                    span{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        text-align: left;
+                        width: 100%;
+                        height: 10%;
+                        font-size: 18px;
+                        color: whitesmoke;
+                        margin: 0 ;
+                        padding: 0 9px;
+                    }
+                    input{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        width: 35%;
+                        height: 5%;
+                        text-align: center;
+                        margin: 10px ;
+                        flex-wrap: wrap;  
+                    }
+                    .btnBox0Home{
+                        opacity: 0;
+                    }
+                    .btnBoxHome{
+                        opacity: 1;
+                        width: 100%;
+                        height: 20%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-start;
+                        margin: 10px 0;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        padding: 4px;
+                        .commentBoxHome{
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: flex-start;
+                            width: 98%;
+                            height: 60%;
+                            text-align: left;
+                            margin: 0 ;
+                            border: none;
+                            padding: 0 5px;
+                            font-size: 18px;
+                        }
+                        .sentComHome{
+                            background-color: rgb(73,36,62);
+                            color: whitesmoke;
+                            border-radius: 5px;
+                            border: 1px solid rgb(112,66,100);
+                            position: absolute;
+                            bottom: 15%;
+                            left: 1%;
+                            width: 8%;
+                            padding: 5px 10px;
+                            transition: .2s;
+                            cursor: pointer;
+                            &:hover{
+                                color: black;
+                                background-color: #d0b862;
+                                border-color: #d0b862;
+                                cursor: pointer;
+                            }
+                        }    
+                        
+                        
+                        
+                    }
+
+                }
+                
+            }
+            .contentTab30{
+                visibility: hidden;
+            }
+            .contentTab3{
+                width: 100%;
+                height: 95%;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                flex-direction: row;
+                font-size: 60px;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                visibility: visible;
+                line-height: 35px;
+                flex-wrap: wrap;
+                .ulTab3{
+                    width: 60%;
+                    height: 100%;
+                    direction: ltr;
+                    background-color: rgb(112,66,100);
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    overflow: scroll;
+                    li{
+                        width: 90%;
+                        font-size: 20px;
+                        list-style: decimal;
+                        background-color: rgb(112,66,100);
+                        margin: 10px auto;
+                        cursor: pointer;
+                        color: whitesmoke;
+                        border-bottom: 1px solid whitesmoke;
+                        p{
+                            color: black;
+                            background-color: rgb(112,66,100);
+                        }
+                    } 
+                    
+                }
+                #studyTab3{
+                    background-color: rgb(73,36,62);
+                    width: 100%;
+                    display: flex;
+                    height: 10vh;
+                    font-size: 30px;
+                    justify-content: flex-end;
+                    align-items: center;
+                    padding: 10px;
+                    color: whitesmoke;
+                }
+                .controlList{
+                    background-color: rgb(112,66,100);
+                    width: 40%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-end;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    border-right: 1px solid rgba(245, 245, 245, 0.371);
+                    span{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        text-align: left;
+                        width: 100%;
+                        height: 10%;
+                        font-size: 18px;
+                        color: whitesmoke;
+                        margin: 0 ;
+                        padding: 0 9px;
+                    }
+                    input{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        width: 35%;
+                        height: 5%;
+                        text-align: center;
+                        margin: 10px ;
+                        flex-wrap: wrap;   
+                    }
+                    .btnBox0{
+                        opacity: 0;
+                    }
+                    .btnBox{
+                        opacity: 1;
+                        width: 100%;
+                        height: 20%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-start;
+                        margin: 10px 0;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        padding: 4px;
+                        .commentBox{
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: flex-start;
+                            width: 98%;
+                            height: 60%;
+                            text-align: left;
+                            margin: 0 ;
+                            border: none;
+                            padding: 0 5px;
+                            font-size: 18px;
+                        }
+                        .sentCom{
+                            background-color: rgb(73,36,62);
+                            color: whitesmoke;
+                            border-radius: 5px;
+                            border: 1px solid rgb(112,66,100);
+                            position: absolute;
+                            bottom: 15%;
+                            left: 1%;
+                            width: 8%;
+                            padding: 5px 10px;
+                            transition: .2s;
+                            cursor: pointer;
+                            &:hover{
+                                color: black;
+                                background-color: #d0b862;
+                                border-color: #d0b862;
+                                cursor: pointer;
+                            }
+                        }                        
+                    }
+
+                }
+                
+                
+            }
+            .contentTab40{
+                visibility: hidden;
+            }
+            .contentTab4{
+                width: 100%;
+                height: 95%;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                flex-direction: row;
+                font-size: 60px;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                visibility: visible;
+                line-height: 35px;
+                flex-wrap: wrap;
+                .ulTab4{
+                    width: 60%;
+                    height: 100%;
+                    direction: ltr;
+                    background-color: rgb(112,66,100);
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    overflow: scroll;
+                    li{
+                        width: 90%;
+                        font-size: 20px;
+                        list-style: decimal;
+                        background-color: rgb(112,66,100);
+                        margin: 10px auto;
+                        cursor: pointer;
+                        color: whitesmoke;
+                        border-bottom: 1px solid whitesmoke;
+                        p{
+                            color: black;
+                            background-color: rgb(112,66,100);
+                        }
+                    } 
+                    
+                }
+                #workTab4{
+                    background-color: rgb(73,36,62);
+                    width: 100%;
+                    display: flex;
+                    height: 10vh;
+                    font-size: 30px;
+                    justify-content: flex-end;
+                    align-items: center;
+                    padding: 10px;
+                    color: whitesmoke;
+                }
+                .controlListwork{
+                    background-color: rgb(112,66,100);
+                    width: 40%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-end;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    border-right: 1px solid rgba(245, 245, 245, 0.371);
+                    span{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        text-align: left;
+                        width: 100%;
+                        height: 10%;
+                        font-size: 18px;
+                        color: whitesmoke;
+                        margin: 0 ;
+                        padding: 0 9px;
+                    }
+                    input{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        width: 35%;
+                        height: 5%;
+                        text-align: center;
+                        margin: 10px ;
+                        flex-wrap: wrap;  
+                    }
+                    .btnBox0Work{
+                        opacity: 0;
+                    }
+                    .btnBoxWork{
+                        opacity: 1;
+                        width: 100%;
+                        height: 20%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-start;
+                        margin: 10px 0;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        padding: 4px;
+                        .commentBoxWork{
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: flex-start;
+                            width: 98%;
+                            height: 60%;
+                            text-align: left;
+                            margin: 0 ;
+                            border: none;
+                            padding: 0 5px;
+                            font-size: 18px;
+                        }
+                        .sentComWork{
+                            background-color: rgb(73,36,62);
+                            color: whitesmoke;
+                            border-radius: 5px;
+                            border: 1px solid rgb(112,66,100);
+                            position: absolute;
+                            bottom: 15%;
+                            left: 1%;
+                            width: 8%;
+                            padding: 5px 10px;
+                            transition: .2s;
+                            cursor: pointer;
+                            &:hover{
+                                color: black;
+                                background-color: #d0b862;
+                                border-color: #d0b862;
+                                cursor: pointer;
+                            }
+                        }                        
+                    }
+
+                }
+                
+            }
+            
+        }
+        .tabs{
+            grid-column: 2/-1;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            background-color: rgba(73, 36, 62, 0.818);
+            display: flex;
+            flex-direction: row;
+            padding: 5px;
+            align-items: flex-start;
+            flex-direction: column;
+            position: absolute;
+            top: 0;
+            left: 0;
+            button{
+                width: 90%;
+                height: 10vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: none;
+                background-color: rgb(73,36,62);
+                margin: 5px auto;
+                cursor: pointer;
+                flex-direction: row;
+                position: relative;
+                color: whitesmoke;
+                span{
+                    position: absolute;
+                    width: 35px;
+                    height: 35px;
+                    background-color: rgb(112,66,100);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    top: 0;
+                    right: 0;
+                    border-radius: 50%;
+                    color: whitesmoke;
+                }
+            }
+
+        }
+        .theEnd0{
+            display: none;
+        }
+        .theEnd{
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: white;
+            color: black;
+            padding: 5px 10px;
+            width: 8%;
+            height: 5%;
+            border-radius: 5px;
+            transition: .5s;
+            display: flex;
+            &:hover{
+                background-color: green;
+                color: white;
+            }
+        }
+        .theEnd01{
+            display: none;
+            
+        }
+        .theEnd1{
+            display: flex;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: white;
+            color: black;
+            padding: 5px 10px;
+            width: 8%;
+            height: 5%;
+            border-radius: 5px;
+            transition: .5s;
+            pointer-events: none;
+            &:hover{
+                background-color: green;
+                color: white;
+            }
+        }
+        .theEnd02{
+            display: none;
+        }
+        .theEnd2{
+            display: flex;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: white;
+            color: black;
+            padding: 5px 10px;
+            width: 8%;
+            height: 5%;
+            border-radius: 5px;
+            transition: .5s;
+            &:hover{
+                background-color: green;
+                color: white;
+            }
+        }
+    }
+    .popup1{
+        display: grid;
+        grid-template-columns: 90% 10%;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        right: 0;
+        overflow: hidden;
+        z-index: 2;
+        
+        .controlBar{
+            grid-column: 1/2;
+            height: 100%;
+            display: flex;
+            background-color: #49243e00;
+            flex-direction: column;
+            position: relative;
+            .btnsControls{
+                width: 100%;
+                height: 5%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-direction: row;
+                background-color: rgba(73, 36, 62, 0.818);
+
+                button{
+                    // margin: 0 5px;
+                    width: 50px;
+                    height: 5vh;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    // background-color: rgba(255, 255, 255, 0);
+                    border: 1px solid #49243E;
+                    cursor: pointer;
+                    background-color: #49243e00;
+                    svg{
+                        fill: whitesmoke;
+                    }
+                }
+                .cenretBtn0{
+                    display: none;
+                }
+                .cenretBtn{
+                    display: flex;
+                }
+                .btnSvgClose:hover{
+                    background-color: red;
+                }
+                .btnSvgCenter:hover{
+                    background-color: green;
+
+                }
+                .btnSvgMin:hover{
+                    background-color: green;
+
+                }
+
+            }
+            .contentTab10{
+                visibility: hidden;
+            }
+            .contentTab1{
+                width: 100%;
+                height: 95%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: azure;
+                font-size: 60px;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                visibility: visible;
+                .mainDivCart{
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgb(112,66,100);
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: flex-end;
+                    flex-wrap: wrap;
+                    position: relative;
+                    h1{
+                        font-size: 25px;
+                        background-color: rgb(73,36,62);
+                        color: whitesmoke;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 10%;
+                        padding-right: 20px;
+                        border: 1px solid rgba(245, 245, 245, 0.099);
+                        
+                    }
+                    .contantCart{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        width: 100%;
+                        height: 90%;
+                        // background-color: darkkhaki;
+                        flex-wrap: wrap;
+                        .cleean{
+                            width: 10%;
+                            height: 7%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border: none;
+                            border-right: 2px solid rgba(255, 255, 255, 0.212);
+                            background-color: #49243E;
+                            color: white;
+                            transition: .5s;
+                            &:hover{
+                                background-color: #d0b862;
+                                color: black;
+                            }
+                            
+
+                        }
+                        input{
+                            display: flex;
+                            background-color: #49243E;
+                            width: 90%;
+                            height: 7%;
+                            text-align: right;
+                            justify-content: left;
+                            align-items: center;
+                            margin:0;
+                            font-size: 18px;
+                            border: none;
+                            
+                        }
+                        ul{
+                            position: relative;
+                            // background-color: #390fe1;
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            li{
+                                width: 100%;
+                                background-color: rgb(112,66,100);
+                                display: flex;
+                                color: whitesmoke;
+
+
+
+                            }
+                            .sended{
+                                background-color: rgb(73,36,62);
+                                color: whitesmoke;
+                                border-radius: 5px;
+                                border: 1px solid rgb(112,66,100);
+                                position: fixed;
+                                bottom: 2%;
+                                left: 40%;
+                                width: 15%;
+                                padding: 5px 10px;
+                                transition: .2s;
+                                cursor: pointer;
+                                &:hover{
+                                    color: black;
+                                    background-color: #d0b862;
+                                    border-color: #d0b862;
+                                    cursor: pointer;
+                                }
+                            }
+
+                        }
+                        .selectLI0{
+                            visibility: hidden;
+                        }
+                        .selectLI{
+                            width: 30%;
+                            height: 100vh;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            background-color: rgb(112,66,100);
+                            padding: 10px;
+                            flex-direction: column;
+                            visibility: visible;
+                            text-align: left;
+                            h3{
+                                font-size: 18px;
+                                width: 100%;
+                                height: 5vh;
+                                color: whitesmoke;
+                                // visibility: visible;
+                                // color: rgba(255, 0, 0, 0);
+                            }
+                            .projectName{
+                                width: 100%;
+                                height: 10vh;
+                                background-color: rgba(73, 36, 62, 0);
+                                margin: 10px 0;
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: center;
+                                align-items: center;
+                                flex-wrap: wrap;
+                                #pn{
+                                    font-size: 14px;
+                                    width: 100%;
+                                    color: whitesmoke;
+                                }
+                                .btnPjN{
+                                    margin: 0 5px;
+                                    padding: 5px 10px ;
+                                    width: 30%;
+                                    height: 50%;
+                                    justify-content: center;
+                                    align-items: center;
+                                    display: flex;
+                                    cursor: pointer;
+                                    border-radius: 5px;
+                                    border: 2px solid rgb(162, 86, 142);
+                                    transition: .2s;
+                                    &:hover{
+                                        background-color: rgb(166, 88, 146);
+                                        color: white;
+                                    }
+                                }
+                            }
+                            .priority{
+                                width: 100%;
+                                height: 10vh;
+                                background-color: rgba(112, 66, 100, 0);
+                                margin: 10px 0;
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: center;
+                                align-items: center;
+                                flex-wrap: wrap;
+                                #pP{
+                                    font-size: 14px;
+                                    width: 100%;
+                                    color: whitesmoke;
+
+                                }
+                                .btnPjP{
+                                    margin: 0 5px;
+                                    padding: 5px 10px ;
+                                    width: 30%;
+                                    height: 50%;
+                                    justify-content: center;
+                                    align-items: center;
+                                    display: flex;
+                                    cursor: pointer;
+                                    border-radius: 5px;
+                                    border: 2px solid rgb(162, 86, 142);
+                                    transition: .2s;
+                                    &:hover{
+                                        background-color: rgb(166, 88, 146);
+                                        color: white;
+                                    }
+                                }
+                            }
+                            .statuses{
+                                width: 100%;
+                                height: 10vh;
+                                background-color: rgba(112, 66, 100, 0);
+                                margin: 10px 0;
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: center;
+                                align-items: center;
+                                flex-wrap: wrap;
+                                #pS{
+                                    font-size: 14px;
+                                    width: 100%;
+                                    color: whitesmoke;
+
+                                }
+                                .btnPjS{
+                                    margin: 0 5px;
+                                    padding: 5px 10px ;
+                                    width: 30%;
+                                    height: 50%;
+                                    justify-content: center;
+                                    align-items: center;
+                                    display: flex;
+                                    cursor: pointer;
+                                    border-radius: 5px;
+                                    border: 2px solid rgb(162, 86, 142);
+                                    transition: .2s;
+                                    &:hover{
+                                        background-color: rgb(166, 88, 146);
+                                        color: white;
+                                    }
+                                }
+                            }
+                            .accept{
+                                position: absolute;
+                                top: 64vh;
+                                left: 2%;
+                                width: 5%;
+                                height: 5vh;
+                                border-radius: 5px;
+                                cursor: pointer;
+                                background-color: rgb(73,36,62);
+                                color: whitesmoke;
+                                border: 1px solid rgb(112,66,100);
+                                transform: .5s;
+                                &:hover{
+                                    background-color: #d0b862;
+                                    color: black;
+                                    border-color: #d0b862;
+                                    
+                                }
+
+                            }
+                            .toCorrect{
+                                position: absolute;
+                                top: 64vh;
+                                left: 9%;
+                                width: 5%;
+                                height: 5vh;
+                                cursor: pointer;
+                                border-radius: 5px;
+                                background-color: rgb(73,36,62);
+                                color: whitesmoke;
+                                border: 1px solid rgb(112,66,100);
+                                transform: .5s;
+                                &:hover{
+                                    background-color: #d0b862;
+                                    color: black;
+                                    border-color: #d0b862;
+                                    
+                                }
+
+                            }
+                        }
+                        .selectLI11{
+                            visibility: hidden;
+                        }
+                        .selectLI10{
+                            width: 30%;
+                            height: 20%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: rgb(162, 15, 178);
+                            
+                            padding: 10px;
+                            flex-direction: column;
+                            visibility: visible;
+                            position: absolute;
+                            top: 16%;
+                            right: 70%;
+                            h3{
+                                font-size: 16px;
+                                width: 100%;
+                                height: 5vh;
+                            }
+                            .numList{
+                                height: 35%;
+                                // text-decoration: line-through;
+                            }
+                        }
+                        .selectLI21{
+                            visibility: hidden;
+                        }
+                        .selectLI20{
+                            width: 30%;
+                            height: 20%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: rgb(236, 33, 70);
+                            padding: 10px;
+                            flex-direction: column;
+                            visibility: visible;
+                            position: absolute;
+                            top: 16%;
+                            right: 70%;
+                            h3{
+                                font-size: 16px;
+                                width: 100%;
+                                height: 5vh;
+                            }
+                            .numList{
+                                height: 35%;
+                                // text-decoration: line-through;
+                            }
+                        }
+                        .selectLI31{
+                            visibility: hidden;
+                        }
+                        .selectLI30{
+                            width: 30%;
+                            height: 20%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: rgb(48, 24, 100);
+                            
+                            padding: 10px;
+                            flex-direction: column;
+                            visibility: visible;
+                            position: absolute;
+                            top: 16%;
+                            right: 70%;
+                            h3{
+                                font-size: 16px;
+                                width: 100%;
+                                height: 5vh;
+                            }
+                            .numList{
+                                height: 35%;
+                                // text-decoration: line-through;
+                            }
+                        }
+                        ul{
+                            display: flex;
+                            background-color: rgb(112,66,100);
+                            width: 70%;
+                            height: 93%;
+                            text-align: left;
+                            justify-content: flex-start;
+                            align-items: flex-end;
+                            flex-direction: column;
+                            padding: 30px 50px;
+                            flex-wrap: wrap;
+                            overflow: hidden;
+
+                            li{
+                                display: flex;
+                                direction: ltr;
+                                list-style: circle;
+                                font-size: 16px;
+                                color: rgb(112,66,100);
+                                padding: 10px;
+                                background-color: #ffffff;
+                                margin: 10px 0;
+                                width: 100%;
+
+                            }
+                        }
+                    }
+                }
+                
+                
+            }
+            .contentTab20{
+                visibility: hidden;
+            }
+            .contentTab2{
+                width: 100%;
+                height: 95%;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                flex-direction: row;
+                font-size: 60px;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                visibility: visible;
+                line-height: 35px;
+                flex-wrap: wrap;
+                .ulTab2{
+                    width: 60%;
+                    height: 100%;
+                    direction: ltr;
+                    background-color: rgb(112,66,100);
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    overflow: scroll;
+                    li{
+                        width: 90%;
+                        font-size: 20px;
+                        list-style: decimal;
+                        background-color: rgb(112,66,100);
+                        margin: 10px auto;
+                        cursor: pointer;
+                        color: whitesmoke;
+                        border-bottom: 1px solid whitesmoke;
+                        p{
+                            color: black;
+                            background-color: rgb(112,66,100);
+                        }
+                    }  
+                }
+                #homeTab2{
+                    background-color: rgb(73,36,62);
+                    width: 100%;
+                    display: flex;
+                    height: 10vh;
+                    font-size: 30px;
+                    justify-content: flex-end;
+                    align-items: center;
+                    padding: 10px;
+                    color: whitesmoke;
+                }
+                .controlListHome{
+                    background-color: rgb(112,66,100);
+                    width: 40%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-end;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    border-right: 1px solid rgba(245, 245, 245, 0.371);
+                    span{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        text-align: left;
+                        width: 100%;
+                        height: 10%;
+                        font-size: 18px;
+                        color: whitesmoke;
+                        margin: 0 ;
+                        padding: 0 9px;
+                    }
+                    input{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        width: 35%;
+                        height: 5%;
+                        text-align: center;
+                        margin: 10px ;
+                        flex-wrap: wrap;  
+                    }
+                    .btnBox0Home{
+                        opacity: 0;
+                    }
+                    .btnBoxHome{
+                        opacity: 1;
+                        width: 100%;
+                        height: 20%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-start;
+                        margin: 10px 0;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        padding: 4px;
+                        .commentBoxHome{
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: flex-start;
+                            width: 98%;
+                            height: 60%;
+                            text-align: left;
+                            margin: 0 ;
+                            border: none;
+                            padding: 0 5px;
+                            font-size: 18px;
+                        }
+                        .sentComHome{
+                            background-color: rgb(73,36,62);
+                            color: whitesmoke;
+                            border-radius: 5px;
+                            border: 1px solid rgb(112,66,100);
+                            position: absolute;
+                            bottom: 15%;
+                            left: 1%;
+                            width: 8%;
+                            padding: 5px 10px;
+                            transition: .2s;
+                            cursor: pointer;
+                            &:hover{
+                                color: black;
+                                background-color: #d0b862;
+                                border-color: #d0b862;
+                                cursor: pointer;
+                            }
+                        }    
+                        
+                        
+                        
+                    }
+
+                }
+                
+                
+            }
+            .contentTab30{
+                visibility: hidden;
+            }
+            .contentTab3{
+                width: 100%;
+                height: 95%;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                flex-direction: row;
+                font-size: 60px;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                visibility: visible;
+                line-height: 35px;
+                flex-wrap: wrap;
+                .ulTab3{
+                    width: 60%;
+                    height: 100%;
+                    direction: ltr;
+                    background-color: rgb(112,66,100);
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    overflow: scroll;
+                    li{
+                        width: 90%;
+                        font-size: 20px;
+                        list-style: decimal;
+                        background-color: rgb(112,66,100);
+                        margin: 10px auto;
+                        cursor: pointer;
+                        color: whitesmoke;
+                        border-bottom: 1px solid whitesmoke;
+                        p{
+                            color: black;
+                            background-color: rgb(112,66,100);
+                        }
+                    } 
+                    
+                }
+                #studyTab3{
+                    background-color: rgb(73,36,62);
+                    width: 100%;
+                    display: flex;
+                    height: 10vh;
+                    font-size: 30px;
+                    justify-content: flex-end;
+                    align-items: center;
+                    padding: 10px;
+                    color: whitesmoke;
+                }
+                .controlList{
+                    background-color: rgb(112,66,100);
+                    width: 40%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-end;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    border-right: 1px solid rgba(245, 245, 245, 0.371);
+                    span{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        text-align: left;
+                        width: 100%;
+                        height: 10%;
+                        font-size: 18px;
+                        color: whitesmoke;
+                        margin: 0 ;
+                        padding: 0 9px;
+                    }
+                    input{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        width: 35%;
+                        height: 5%;
+                        text-align: center;
+                        margin: 10px ;
+                        flex-wrap: wrap;   
+                    }
+                    .btnBox0{
+                        opacity: 0;
+                    }
+                    .btnBox{
+                        opacity: 1;
+                        width: 100%;
+                        height: 20%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-start;
+                        margin: 10px 0;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        padding: 4px;
+                        .commentBox{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        width: 98%;
+                        height: 60%;
+                        text-align: left;
+                        margin: 0 ;
+                        border: none;
+                        padding: 0 5px;
+                        font-size: 18px;
+                        }
+                        .sentCom{
+                            background-color: rgb(73,36,62);
+                            color: whitesmoke;
+                            border-radius: 5px;
+                            border: 1px solid rgb(112,66,100);
+                            position: absolute;
+                            bottom: 15%;
+                            left: 1%;
+                            width: 8%;
+                            padding: 5px 10px;
+                            transition: .2s;
+                            cursor: pointer;
+                            &:hover{
+                                color: black;
+                                background-color: #d0b862;
+                                border-color: #d0b862;
+                                cursor: pointer;
+                            }
+                        }                        
+                    }
+
+                }
+                
+            }
+            .contentTab40{
+                visibility: hidden;
+            }
+            .contentTab4{
+                width: 100%;
+                height: 95%;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                flex-direction: row;
+                font-size: 60px;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                visibility: visible;
+                line-height: 35px;
+                flex-wrap: wrap;
+                .ulTab4{
+                    width: 60%;
+                    height: 100%;
+                    direction: ltr;
+                    background-color: rgb(112,66,100);
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    overflow: scroll;
+                    li{
+                        width: 90%;
+                        font-size: 20px;
+                        list-style: decimal;
+                        background-color: rgb(112,66,100);
+                        margin: 10px auto;
+                        cursor: pointer;
+                        color: whitesmoke;
+                        border-bottom: 1px solid whitesmoke;
+                        p{
+                            color: black;
+                            background-color: rgb(112,66,100);
+                        }
+                    } 
+                    
+                }
+                #workTab4{
+                    background-color: rgb(73,36,62);
+                    width: 100%;
+                    display: flex;
+                    height: 10vh;
+                    font-size: 30px;
+                    justify-content: flex-end;
+                    align-items: center;
+                    padding: 10px;
+                    color: whitesmoke;
+                }
+                .controlListwork{
+                    background-color: rgb(112,66,100);
+                    width: 40%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-end;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    border-right: 1px solid rgba(245, 245, 245, 0.371);
+                    span{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        text-align: left;
+                        width: 100%;
+                        height: 10%;
+                        font-size: 18px;
+                        color: whitesmoke;
+                        margin: 0 ;
+                        padding: 0 9px;
+                    }
+                    input{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        width: 35%;
+                        height: 5%;
+                        text-align: center;
+                        margin: 10px ;
+                        flex-wrap: wrap;  
+                    }
+                    .btnBox0Work{
+                        opacity: 0;
+                    }
+                    .btnBoxWork{
+                        opacity: 1;
+                        width: 100%;
+                        height: 20%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-start;
+                        margin: 10px 0;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        padding: 4px;
+                        .commentBoxWork{
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: flex-start;
+                            width: 98%;
+                            height: 60%;
+                            text-align: left;
+                            margin: 0 ;
+                            border: none;
+                            padding: 0 5px;
+                            font-size: 18px;
+                        }
+                        .sentComWork{
+                            background-color: rgb(73,36,62);
+                            color: whitesmoke;
+                            border-radius: 5px;
+                            border: 1px solid rgb(112,66,100);
+                            position: absolute;
+                            bottom: 15%;
+                            left: 1%;
+                            width: 8%;
+                            padding: 5px 10px;
+                            transition: .2s;
+                            cursor: pointer;
+                            &:hover{
+                                color: black;
+                                background-color: #d0b862;
+                                border-color: #d0b862;
+                                cursor: pointer;
+                            }
+                        }  
+                    }
+
+                }
+                
+            }
+
+
+
+
+
+            
+            
+        }
+        .tabs{
+            grid-column: 2/-1;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            background-color: rgba(73, 36, 62, 0.818);
+            display: flex;
+            flex-direction: row;
+            padding: 5px;
+            align-items: flex-start;
+            flex-direction: column;
+            position: absolute;
+            top: 0;
+            left: 0;
+            button{
+                width: 90%;
+                height: 12vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: none;
+                background-color: rgb(73,36,62);
+                margin: 30px auto;
+                cursor: pointer;
+                flex-direction: row;
+                position: relative;
+                color: whitesmoke;
+                font-size: 16px;
+                span{
+                    position: absolute;
+                    width: 35px;
+                    height: 35px;
+                    background-color: rgb(112,66,100);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    top: 3px;
+                    right: 3px;
+                    border-radius: 50%;
+                    color: whitesmoke;
+                }
+            }
+            #tab2{
+                margin-top: 0;
+            }
+            #tab3{
+                margin-top: 0;
+            }
+            #tab4{
+                margin-top: 0;
+            }
+
+        }
+        
+    }
+
+
+    .minPopUp0{
+        display: none;
+    }
+    .minPopUp{
+        width: 15%;
+        height: 5vh;
+        position: fixed;
+        bottom: 1%;
+        right: 1%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: crimson;
+        button{
+            margin: 0 5px;
+            width: 50px;
+            height: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0);
+            border: none;
+            cursor: pointer;
+
+        }
+    }
+    .minPopUp{
+        width: 10%;
+        height: 5vh;
+        position: fixed;
+        bottom: 5%;
+        right: 1%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background-image: linear-gradient(to bottom , rgb(73,36,62), rgb(91, 45, 77) ,rgb(105, 52, 89) ,rgb(193, 101, 165));
+        // background-color: rgb(73,36,62);
+        button{
+            margin: 0 5px;
+            width: 50px;
+            height: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0);
+            border: none;
+            cursor: pointer;
+
+        }
+        #closepg:hover{
+            background-color: red;
+            // fill: red;
+        }
+        #fullpg:hover{
+            background-color: green;
+        }
+        #centerSite:hover{
+            background-color: green;
+
+        }
+    }
+    .taskes{
+        position: relative;
+        top: 3%;
+        left: -63%;
+        width: 720px;
+        height: 470px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 1px solid white;
+        z-index: 0;
+        
+        
+        .haightTaskesList{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            background-color: white;
+            img{
+                // width: 100%;
+                margin-top: 80%;
+                background-color: rgb(47, 127, 193);
+            }
+            
+            
+        }
+        .valueTaskesList{
+            position: absolute;
+            top:29%;
+            right: 50%;
+            transform: translate(50% , 50%);
+            width: 240px;
+            height: 100px;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            text-align: center;
+            flex-direction: column;
+            span{
+                width: 100%;
+                height: 50%;
+                cursor: default;
+                
+
+            }
+        }
+    }
+    .allList{
+        position: relative;
+        top: 40%;
+        left: 19%;
+        width: 480px;
+        height: 310px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 1px solid white;
+        
+        
+        .haightAllList{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            background-color: white;
+            img{
+                // width: 100%;
+                margin-top: 80%;
+                background-color: rgb(3, 119, 30);
+            }
+            
+            
+        }
+        .valueAllList{
+            position: absolute;
+            top:20%;
+            right: 49%;
+            transform: translate(50% , 50%);
+            width: 240px;
+            height: 100px;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            text-align: center;
+            flex-direction: column;
+            span{
+                width: 100%;
+                height: 50%;
+                cursor: default;
+                
+
+            }
+        }
+    }
+    .watList{
+        position: relative;
+        top: 2%;
+        left: 23%;
+        width: 500px;
+        height: 335px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 1px solid white;
+        z-index: 0; 
+        
+        .haightWatList{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            background-color: white;
+            img{
+                // width: 100%;
+                margin-top: 80%;
+                background-color: rgb(255, 255, 0);
+            }
+            
+            
+        }
+        .valueWatList{
+            position: absolute;
+            top:23%;
+            right: 49%;
+            transform: translate(50% , 50%);
+            width: 300px;
+            height: 100px;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 35px;
+            text-align: center;
+            flex-direction: column;
+        span{
+            width: 100%;
+            height: 50%;
+            cursor: default;
+        }
+        }
+
+    }
+    .completeList{
+        position: relative;
+        top: 48%;
+        left: 30%;
+        width: 500px;
+        height: 330px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 1px solid white;
+        z-index: 0;
+        flex-direction: column;
+        z-index: 0;
+        
+            span{
+                width: 100%;
+                height: 50%;
+                cursor: default;
+
+                
+
+            }
+        
+        .haightCompleteList{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            background-color: white;
+            img{
+                // width: 100%;
+                margin-top: 80%;
+                background-color: #e02d2d;
+            }
+            
+            
+        }
+        .valueCompleteList{
+            position: absolute;
+            top:22%;
+            right: 49%;
+            transform: translate(50% , 50%);
+            width: 300px;
+            height: 100px;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 35px;
+            text-align: center;
+            flex-direction: column;
+            span{
+                width: 100%;
+                height: 50%;
+                cursor: default;
+                font-size: 35px;
+                
+
+            }
+        }
+
+    }
+    .main{
+        width: 100px;
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin: 15px;
+        @keyframes icon {
+            from{
+                transform: scale(.9);
+            }
+            to{
+                transform: scale(1);
+            }
+            
+        }
+        .interDiv{
+            animation-name: icon;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            width: 110px;
+            height: 110px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-size: 30px;
+            color: white;
+            text-align: center;
+            position: fixed;
+            right: 0%;
+            top: 0;
+            
+            img{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
+          
+            
+        }
+        
+        
+
+    }
+    #myDateSide {
+        position: absolute;
+        top: 105%;
+        right: 0%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        height: 6vh;
+        .dateSide{
+            color: #210f1c;
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            font-size: 18px;
+            padding: 0 10px;
+            cursor: default;
+            font-weight: 700;
+
+        }
+        button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 5%;
+            cursor: pointer;
+            background-color: #86127800;
+            border: none;
+            margin-bottom: 10px;
+            position: relative;
+            svg:hover{
+                fill: rgb(255,250,170);
+                
+            } 
+            .ulMores{
+                position: absolute;
+                top: -6px;
+                right: 10px;
+                background-color: white;
+                width: 20px;
+                height: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+
+            }
+            
+        }
+        .moreD{
+            position: absolute;
+            bottom:50px;
+            left: 25px;
+            height: 90vh;
+            width: 30%;
+            background-color: rgba(73, 36, 62, 0.956);
+            transition: .2s;
+            visibility: hidden;
+            border-radius: 10px;
+            cursor: pointer;
+            // padding: 20px;
+            overflow: scroll;
+            display: flex;
+            flex-direction: column;
+            // position: relative;
+
+            .titleOfWin{
+                background-color: rgb(73, 36, 62);
+                color: rgb(255,250,170);
+                height: 5vh;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: sticky;
+                top: 0px;
+                padding: 30px;
+                font-size: 20px;
+
+            }
+            #ulMore{
+                // background-color: #390fe1;
+                direction: ltr;
+                text-align: justify;
+                padding: 0 30px ;
+                li{
+                    list-style: decimal;
+                    color: rgb(255,250,170);
+                    margin: 20px 0;
+                    border-bottom: 1px solid rgb(255,250,170);
+                    padding:5px 10px 8px;
+
+                }
+            }
+
+        }
+        
+    }
+        
+}

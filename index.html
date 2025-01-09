@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="fa_IR" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.min.css">
+
+</head>
+
+<body>
+    <div id="popDiv" class="popup0">
+        <div class="controlBar">
+            <div class="btnsControls">
+                <button class="btnSvgClose">
+                    <svg id="closepg" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                        class="bi bi-x" viewBox="0 0 16 16" >
+                        <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                    </svg>
+                </button>
+                <button class="btnDisplay btnSvgMin">
+                    <svg id="fullpg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-fullscreen " viewBox="0 0 16 16">
+                        <path
+                            d="M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5M.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5m15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5" />
+                    </svg>
+                </button>
+                <button id="centerPage" class="cenretBtn0 btnSvgCenter ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-arrow-down-left-square" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm10.096 3.146a.5.5 0 1 1 .707.708L6.707 9.95h2.768a.5.5 0 1 1 0 1H5.5a.5.5 0 0 1-.5-.5V6.475a.5.5 0 1 1 1 0v2.768z" />
+                    </svg>
+                </button>
+                <button class="btnSvgMin">
+                    <svg id="minpg" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                        class="bi bi-dash" viewBox="0 0 16 16">
+                        <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8" />
+                    </svg>
+                </button>
+            </div>
+
+
+            <div id="divTab1" class="contentTab1">
+                <div class="mainDivCart">
+                    <h1>hi, welcome to your Notelist</h1>
+                    <div class="contantCart">
+                        <input style="direction: ltr; text-align: left;padding: 0 5px;" id="inputTab1"
+                            placeholder="Please Enter Your Name Task Then Press Enter" type="text">
+                        <button id="cleanInput" class="cleean">To Correct</button>
+                        <ul id="ulListTab1">
+                            <button id="finished" class="sended">Send to List</button>
+                        </ul>
+                        <div id="selectDiv" class="selectLI0">
+                            <h3 id="question">nothing</h3>
+                            <div class="projectName">
+                                <h2 id="pn" >Category of projects</h2>
+                                <button class="btnPjN" id="homeBtn">Home</button>
+                                <button class="btnPjN" id="StudyBtn">Study</button>
+                                <button class="btnPjN" id="WorkBtn">Work</button>
+
+                            </div>
+                            <div class="priority">
+                                <h2 id="pP" >Classification of levels</h2>
+                                <button class="btnPjP" id="HighBtn">High</button>
+                                <button class="btnPjP" id="MediumBtn">Medium</button>
+                                <button class="btnPjP" id="LowBtn">Low</button>
+
+                            </div>
+                            <div class="statuses">
+                                <h2 id="pS" >Category of projects</h2>
+                                <button class="btnPjS" id="DoneBtn">Done</button>
+                                <button class="btnPjS" id="StudyBtn">Delete</button>
+                                <button class="btnPjS" id="WaitingBtn">Waiting</button>
+
+                            </div>
+                            <button id="acceptBtn" class="accept">write</button>
+                            <button id="toCorrectBtn" class="toCorrect">redo</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+            <div id="divTab2" class="contentTab20">
+                <span id="homeTab2">Home</span>
+                <ul id="listTab2" class="ulTab2"></ul>
+
+                <div class="controlListHome">
+                    <span style="direction: ltr; height: 10vh;">Enter a Row Number in below Box then press Enter .</span>
+
+                    <input id="numOfRowHomeDel" type="text" placeholder="Delete Row Number">
+
+                    <input id="numOfRowHomeRes" type="text" placeholder="Restore Row Number">
+
+                    <input id="numOfRowHomeWat" type="text" placeholder="Wating Row Number">
+
+                    <input id="numOfRowHomeDon" type="text" placeholder="Done Row Number">
+
+                    <span style="direction: ltr; padding: 20px 5px 0; border-top: 1px solid rgba(255, 255, 255, 0.366);">Also You can add more details ! Please click on Row Task .</span>
+                    <div id="boxControplWMHome" class="btnBox0Home">
+                        <input id="comInputHome" class="commentBoxHome" type="text"><br>
+                        <button id="addComHome" class="sentComHome">Add</button>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+
+
+
+
+            <div id="divTab3" class="contentTab30">
+                <span id="studyTab3">Study</span>
+
+                <ul id="listTab3" class="ulTab3"></ul>
+                <div class="controlList">
+                    <span style="direction: ltr; height: 10vh;">Enter a Row Number in below Box then press Enter .</span>
+                    <input id="numOfRowStudyDel" type="text" placeholder="Delete Row Number">
+                    <input id="numOfRowStudyRes" type="text" placeholder="Restore Row Number">
+                    <input id="numOfRowStudyWat" type="text" placeholder="Wating Row Number">
+                    <input id="numOfRowStudyDon" type="text" placeholder="Done Row Number">
+                    <span style="direction: ltr; padding: 20px 5px 0; border-top: 1px solid rgba(255, 255, 255, 0.366);">Also You can add more details ! Please click on Row Task .</span>
+                    <div id="boxControplWM" class="btnBox0">
+                        <input id="comInput" class="commentBox" type="text"><br>
+                        <button id="addCom" class="sentCom">Add</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+            <div id="divTab4" class="contentTab40">
+                <span id="workTab4">Work</span>
+
+                <ul id="listTab4" class="ulTab4"></ul>
+                <div class="controlListwork">
+                    <span style="direction: ltr; height: 10vh;">Enter a Row Number in below Box then press Enter .</span>
+
+                    <input id="numOfRowWorkDel" type="text" placeholder="Delete Row Number">
+
+                    <input id="numOfRowWorkRes" type="text" placeholder="Restore Row Number">
+
+                    <input id="numOfRowWorkWat" type="text" placeholder="Wating Row Number">
+
+                    <input id="numOfRowWorkDon" type="text" placeholder="Done Row Number">
+
+                    <span style="direction: ltr; padding: 20px 5px 0; border-top: 1px solid rgba(255, 255, 255, 0.366);">Also You can add more details ! Please click on Row Task .</span>
+                    <div id="boxControplWMWork" class="btnBox0Work">
+                        <input id="comInputWork" class="commentBoxWork" type="text"><br>
+                        <button id="addComWork" class="sentComWork">Add</button>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+
+
+
+        </div>
+        <div class="tabs">
+            <button id="tab1">Write your Tasks</button>
+            <button id="tab2"><span id="countreHome" class="numOfHome">0</span>Home </button>
+            <button id="tab3"><span id="countreStudy" class="numOfStudy">0</span>Study</button>
+            <button id="tab4"><span id="countreWork" class="numOfWork">0</span>Work</button>
+        </div>
+
+
+    </div>
+    <div id="minPop" class="minPopUp0">
+        <button>
+            <svg id="closepg" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-x"
+                viewBox="0 0 16 16">
+                <path
+                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+            </svg>
+        </button>
+        <button>
+            <svg clas id="fullpg" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white"
+                class="bi bi-fullscreen " viewBox="0 0 16 16" style="padding: 8px;">
+                <path
+                    d="M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5M.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5m15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5" />
+            </svg>
+        </button>
+        <button>
+            <svg id="centerSite" xmlns="http://www.w3.org/2000/svg" width="31" height="31" fill="white"
+                class="bi bi-arrow-bar-up" viewBox="0 0 16 16" style="padding: 5px;">
+                <path fill-rule="evenodd"
+                    d="M8 10a.5.5 0 0 0 .5-.5V3.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 3.707V9.5a.5.5 0 0 0 .5.5m-7 2.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5" />
+            </svg>
+        </button>
+
+    </div>
+
+
+
+
+
+
+
+
+    <div class="taskes">
+        <div class="haightTaskesList">
+            <div class="valueTaskesList">
+                <span> <span id="numOfCirT">0</span><span>%</span></span>
+                <span id="allTaskes">All Taskes</span>
+            </div>
+            <img id="hightTaskes" src="../Html/valley-white.svg" alt="">
+        </div>
+    </div>
+
+
+    <div class="allList">
+        <div class="haightAllList">
+            <div class="valueAllList">
+                <span id="numOfCirA"><span id="valNumOfCirA">0</span><span>%</span></span>
+                <span id="allTasks">Done</span>
+            </div>
+            <img id="imgAllLIst" src="../Html/valley-white.svg" alt="">
+        </div>
+    </div>
+
+
+    <div class="watList">
+        <div class="haightWatList">
+            <div class="valueWatList">
+                <span id="numOfCirW"><span id="valNumOfCirW">0</span><span>%</span></span>
+                <span id="progress">Waiting</span>
+            </div>
+            <img id="hightProgress" src="../Html/valley-white.svg" alt="">
+        </div>
+    </div>
+
+
+    <div class="completeList">
+        <div class="haightCompleteList">
+            <div class="valueCompleteList">
+                <span id="numOfCirD"><span id="valNumOfCirD">0</span><span>%</span></span>
+                <span id="delete">Delete</span>
+            </div>
+            <img id="imgDel" src="../Html/valley-white.svg" alt="">
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="daysDiv" class="main">
+        <div id="card1" class="interDiv">
+            <img src="../Html/8168038.webp" alt="">
+
+
+
+        </div>
+    </div>
+    <div id="myDateSide">
+        <div class="dateSide">
+            <script>
+                var MyDate = new Date();
+                document.write( "Today is" + " " + MyDate  );
+            </script>
+        </div>
+        
+        <button id="morWin">
+            <span class="ulMores">0</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#49243E"
+                class="bi bi-microsoft" viewBox="0 0 16 16">
+                <path d="M7.462 0H0v7.19h7.462zM16 0H8.538v7.19H16zM7.462 8.211H0V16h7.462zm8.538 0H8.538V16H16z" />
+            </svg>
+        </button>
+        <div id="morDiv" class="moreD">
+            <h2 class="titleOfWin">You can see all your projects here</h2>
+            <ul id="ulMore" class="ulMoreWIN"></ul>
+
+        </div>
+    </div>
+
+    <script src="indwx.js"></script>
+</body>
+
+</html>
